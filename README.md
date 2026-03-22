@@ -1,6 +1,4 @@
-# 🪙 Coin Classification with AlexNet
-
-**Master 1 Informatique VMI — IFLBE055 Réseaux de neurones pour la vision par ordinateur**
+# Coin Classification with AlexNet
 
 Image classification of coins using a CNN (AlexNet), based on the [DL4CV Coin Classification](https://www.kaggle.com/competitions/dl4cv-coin-classification) Kaggle challenge.
 
@@ -8,9 +6,9 @@ Image classification of coins using a CNN (AlexNet), based on the [DL4CV Coin Cl
 
 ---
 
-## 📁 Dataset Structure
+## Dataset Structure
 
-Downloaded from Google Drive (link provided in the TP), the dataset is organized as:
+Downloaded from Google Drive, the dataset is organized as:
 
 ```
 coin_dataset/kaggle/
@@ -24,7 +22,7 @@ The training set is further split 85/15 into train (8 804 images) and validation
 
 ---
 
-## 🏗️ Model
+## Model
 
 **AlexNet** implemented from scratch, faithful to the original paper:
 
@@ -44,7 +42,7 @@ A **fine-tuned variant** (ImageNet pretrained weights) is also included as an im
 
 ---
 
-## ⚙️ Training
+## Training
 
 | Setting | Scratch | Fine-tuned |
 |---------|---------|------------|
@@ -62,28 +60,27 @@ A **fine-tuned variant** (ImageNet pretrained weights) is also included as an im
 
 ---
 
-## 📊 Results
+## Results
 
 | Model | Val Accuracy |
 |-------|-------------|
-| AlexNet scratch (10 epochs) | ~10% |
-| AlexNet fine-tuned (13 epochs) | ~72% |
+| AlexNet scratch (30 epochs) | ~24% |
+| AlexNet fine-tuned (30 epochs) | ~75% |
 | Kaggle Leaderboard #1 | 90.17% |
 
 The scratch model converges slowly due to the small dataset size (~8 800 images vs 1.2M in the original paper). Fine-tuning with ImageNet weights gives a much stronger baseline.
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. Open the notebook in **Google Colab**
 2. Enable GPU: *Runtime > Change runtime type > T4 GPU*
-3. Set your Kaggle credentials in cell 2 (or upload `kaggle.json`)
-4. Run all cells in order
+3. Run all cells in order
 
 ---
 
-## 📦 Requirements
+## Requirements
 
 All handled automatically in the notebook:
 - PyTorch / torchvision
@@ -93,7 +90,7 @@ All handled automatically in the notebook:
 
 ---
 
-## 🧠 Possible Improvements
+## Possible Improvements
 
 - **Better architecture** — ResNet-50, EfficientNet-B4, ConvNeXt
 - **Advanced augmentation** — MixUp, CutMix, RandAugment
