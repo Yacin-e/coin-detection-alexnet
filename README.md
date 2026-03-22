@@ -12,7 +12,7 @@ Downloaded from Google Drive, the dataset is organized as:
 
 ```
 coin_dataset/kaggle/
-  train.csv        ← Id, Class (10 368 rows, 315 classes)
+  train.csv        ← Id, Class (10 358 rows, 315 classes)
   test.csv         ← Id only   (1 282 rows)
   train/           ← {Id}.jpg
   test/            ← {Id}.jpg
@@ -48,7 +48,7 @@ A **fine-tuned variant** (ImageNet pretrained weights) is also included as an im
 |---------|---------|------------|
 | Optimizer | Adam | SGD |
 | Learning rate | 1e-4 | 1e-3 |
-| Epochs | 50 | 30 |
+| Epochs | 30 | 30 |
 | Scheduler | ReduceLROnPlateau | CosineAnnealing |
 | Loss | CrossEntropyLoss | CrossEntropyLoss |
 
